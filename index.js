@@ -2,15 +2,14 @@ const chalk = require('chalk');
 var moment = require('moment');
 moment().format();
 
-define(['require', 'moment'], function(require, moment) {
-  // Inside some module after the locale is detected. This is the
-  // case where the locale is not known before module load time.
-  require(['moment/locale/de'], function(localeModule) {
-    // here the locale is loaded, but not yet in use
-    console.log(moment().format('LLLL'));  // 'Friday, June 24, 2016 1:42 AM'
 
-    moment.locale('de');
-    // Use moment now that the locale has been properly set.
-    console.log(moment().format('LLLL')); // 'Freitag, 24. Juni 2016 01:42'
-  })
-});
+let current_time = new moment().format("LLLL");
+let beginning = moment("January 1, 2017").format("LLLL");
+let difference = current_time - beginning;
+
+
+console.log(`It is ${current_time}.`);
+console.log(`It is the ${difference} day of the year`); //number is the count of days
+console.log(`It is number seconds into the day`);//number is the count of seconds in today
+console.log(`It is during Daylight Savings Time`);//assuming is in reference to whether it's DSL
+console.log(`It is not a leap year`);//is not is checking if it's currently a leap year

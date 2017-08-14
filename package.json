@@ -1,0 +1,26 @@
+{
+  "name": "date_facts",
+  "version": "1.0.0",
+  "description": "initital",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakedub/datefacts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakedub/datefacts/issues"
+  },
+  "homepage": "https://github.com/jakedub/datefacts#readme",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "moment": "^2.18.1",
+    "save": "^2.3.1"
+  }
+}

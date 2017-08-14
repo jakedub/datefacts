@@ -10,9 +10,10 @@ let end = moment("2017-01-01");
 let duration = moment.duration(now.diff(end));
 let days = Math.round(duration.asDays());
 
-let secondStart = moment ("2017-14-08");
-let secondDuration = moment.duration(now.diff(end));
-let secondTotal = Math.round(duration.asSeconds());
+let hour = now.format('H');
+let minute = now.format('m');
+let second = now.format('s');
+let secondTotal = hour * minute + second;
 
 function daylight() {
   (now.isDST()) ? console.log('It ' + chalk.green('is') + ' during Daylight Savings Time.') : console.log('It ' + chalk.red('is not') + ' during Daylight Savings Time.');

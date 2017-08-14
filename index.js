@@ -16,11 +16,17 @@ let second = now.format('s');
 let secondTotal = hour * minute + second;
 
 function daylight() {
-  (now.isDST()) ? console.log('It ' + chalk.green('is') + ' during Daylight Savings Time.') : console.log('It ' + chalk.red('is not') + ' during Daylight Savings Time.');
+    if ((now.isDST()) === true) {
+      console.log('It ' + chalk.green('is') + ' during Daylight Savings Time.')
+    }  else { console.log('It ' + chalk.red('is not') + ' during Daylight Savings Time.');
+}
 }
 
 function leap() {
-  (now.isLeapYear()) ? console.log('It' + chalk.green('is') + ' a leap year.') : console.log('It ' + chalk.red('is not') + ' a leap year.') ;
+  if ((now.isLeapYear()) === true) {
+    console.log('It' + chalk.green('is') + ' a leap year.')
+  } else { console.log('It ' + chalk.red('is not') + ' a leap year.');
+}
 }
 
 console.log("It is " + chalk.blue(current_time)+ ".");
